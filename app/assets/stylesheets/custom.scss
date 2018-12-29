@@ -37,6 +37,17 @@ a:hover {
 .pb-8, .py-8 {
     padding-bottom: 7rem !important;
 }
+@media only screen and (max-width: 768px) {
+  .mobile-mb {
+      margin-bottom: 30px;
+  }
+  .mobile-mt {
+      margin-top: 30px;
+  }
+  .mobile-text-center {
+      text-align: center;
+  }
+}
 
 /** Text **/
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -154,6 +165,12 @@ form label {
     height: 30px;
     padding-right: 15px;
 }
+@media only screen and (max-width: 768px) {
+    .nav-logo {
+        height: 24px;
+        padding: 0;
+    }
+}
 .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
     color: #17252A;
 }
@@ -200,8 +217,11 @@ form label {
 .about {
     margin-top: 73px;
 }
-.about img {
+.about-advisors img {
     width: 60%;
+}
+.about-team img {
+    width: 100%;
 }
 .team-name {
     font-weight: bold;
