@@ -1,0 +1,47 @@
+<footer>
+  <div class="footer-top bg-ph-white py-6">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-6">
+          <%= link_to image_tag("ph_icon.png", alt: "Prescience Health logo", class: "footer-logo"),
+        '/' %>
+        </div>
+        <div class="col-6 col-md-2">
+          <ul class="list-unstyled text-small">
+            <li><span class="font-weight-bold">SOLUTIONS</span></li>
+            <li><%= link_to "For hospitals", staffright_path, class: "text-muted" %></li>
+            <li><%= link_to "For software vendors", agilecast_path, class: "text-muted" %></li>
+            <li><%= link_to "Pricing", pricing_path, class: "text-muted" %></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2">
+          <ul class="list-unstyled text-small">
+            <li><span class="font-weight-bold">SUPPORT</span></li>
+            <li><%= link_to "Contact support", contact_path, class: "text-muted" %></li>
+            <li><a class="text-muted" href="#">Knowledge Center</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2">
+          <ul class="list-unstyled text-small">
+            <li><span class="font-weight-bold">COMPANY</span></li>
+            <li><%= link_to "About us", about_path, class: "text-muted" %></li>
+            <li><a class="text-muted" href="#">Careers</a></li>
+            <li><a class="text-muted" href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom bg-ph-gray py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-4">
+          <p><%= link_to 'Privacy Policy', privacy_path %></p>
+        </div>
+        <div class="col-md-8 col-8">
+          <p class="text-center">&copy; 2019 Agile Healthcare, LLC dba Prescience Health</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
