@@ -1,0 +1,35 @@
+<%= content_for :html_title, @post.seo_title %>
+<%= content_for :meta_description, @post.meta_description %>
+<div class="offset-md-2 col-md-8 col-12 py-6">
+  <!-- Post title -->
+  <h3 class="font-weight-bold text-justify"><%= @post.title %></h3>
+  <!-- Post author and date -->
+  <p>Published by <%= link_to "#{@post.author.first_name} #{@post.author.last_name}", buttercms_author_path(@post.author.slug) %> on <%= Time.parse(@post.published).strftime('%B %d, %Y') %></p>
+  <!-- Post body -->
+  <%= @post.body.html_safe %>
+  <!-- Link to Next Post -->
+  <% if @next_post %>
+    Next post: <%= link_to @next_post.title, buttercms_post_path(@next_post.slug), :title => @next_post.title %>
+  <% end %>
+</div>
+<!--
+// For sharing, we recommend https://www.addthis.com/get/sharing or https://sumome.com/app/share
+-->
+
+<!--
+// For commenting, we recommend https://disqus.com/
+// Create a Disqus account and paste your snippet below
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'XXXXXXXX';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+-->

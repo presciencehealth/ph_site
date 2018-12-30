@@ -1,0 +1,15 @@
+<div class="card">
+  <!-- Featured image -->
+  <%= image_tag(post.featured_image, class: "card-img-top") if post.featured_image %>
+  <div class="card-body text-justify">
+    <!-- Post title -->
+    <h4 class="card-title"><%= link_to post.title, buttercms_post_path(post.slug), :title => post.title %></h4>
+  
+    <!-- Post date -->
+    <p class="text-muted"><%= Time.parse(post.published).strftime('%B %d, %Y') %></p>
+  
+    <!-- Post summary -->
+    <p><%= post.summary %></p>
+  </div>
+</div>
+

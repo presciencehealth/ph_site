@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md fixed-top navbar-blog navbar-dark bg-ph-dark-green">
+  <div class="container d-flex justify-content-center">
+    <span class="blog-nav-logo">PRESCIENCEHEALTH | Blog</span>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarCollapse">
+      <ul class="navbar-nav justify-content-center"">
+        <li class="nav-item">
+          <%= link_to "Latest Posts", '/blog', class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+          <div class="dropdown-menu">
+            <%= link_to "For hospitals", staffright_path, class: "dropdown-item" %>
+            <%= link_to "For software vendors", agilecast_path, class: "dropdown-item" %>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
