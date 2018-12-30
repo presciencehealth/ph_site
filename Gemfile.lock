@@ -47,6 +47,9 @@ GEM
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
     builder (3.2.3)
+    buttercms-rails (1.2.1)
+      buttercms-ruby (~> 1.3.1)
+    buttercms-ruby (1.3.1)
     byebug (9.0.6)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -62,7 +65,7 @@ GEM
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    i18n (1.2.0)
+    i18n (1.3.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -170,6 +173,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap (~> 4.1.3)
+  buttercms-rails
   byebug (= 9.0.6)
   coffee-rails (= 4.2.2)
   jbuilder (= 2.7.0)
