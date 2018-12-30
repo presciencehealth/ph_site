@@ -193,6 +193,12 @@ form label {
     color: #FFFFFF;
     padding: 8px 0;
 }
+@media only screen and (max-width: 768px) {
+    .blog-nav-logo {
+        height: 20px;
+        padding: 0;
+    }
+}
 .blog-nav-title {
     font-size: 24px;
     color: #FFFFFF;
