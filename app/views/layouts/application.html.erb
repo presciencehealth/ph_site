@@ -23,11 +23,7 @@
   </head>
 
   <body>
-    <% if current_page?(staffright_path) || current_page?(agilecast_path) %>
-      <%= render 'layouts/solutionsheader' %>
-    <% else %>
-      <%= render 'layouts/header' %>
-    <% end %>
+    <%= render 'layouts/header' %>
     <%= yield %>
     <%= render 'layouts/footer' %>
     <script>
