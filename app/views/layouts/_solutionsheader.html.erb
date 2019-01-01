@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-md navbar-light bg-ph-white shadow-nav">
+  <div class="container d-flex justify-content-between">
+    <%= link_to image_tag("ph_logo.png", alt: "Prescience Health logo", class: "nav-logo"),
+        '/' %>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="dropdown-menu">
+            <%= link_to "For hospitals", staffright_path, class: "dropdown-item" %>
+            <%= link_to "For software vendors", agilecast_path, class: "dropdown-item" %>
+          </div>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Pricing", pricing_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Resources", '/blog', class: "nav-link" %>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <a class="nav-link" href="#">Sign in</a>
+        <a href="/demo"><button class="btn btn-primary btn-ph-green btn-nav my-2 my-sm-0" type="submit">REQUEST A DEMO</button></a>
+      </form>
+    </div>
+  </div>
+</nav>
