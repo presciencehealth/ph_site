@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  get 'contacts/new'
+  resources :contacts, only: [:new, :create]
+
   scope :module => 'buttercms' do
     get '/categories/:slug' => 'categories#show', :as => :buttercms_category
     get '/author/:slug' => 'authors#show', :as => :buttercms_author
