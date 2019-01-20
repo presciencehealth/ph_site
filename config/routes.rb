@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  
-  get 'contacts/new'
-  resources :contacts, only: [:new, :create]
 
   scope :module => 'buttercms' do
     get '/categories/:slug' => 'categories#show', :as => :buttercms_category
@@ -20,8 +17,6 @@ Rails.application.routes.draw do
   get  '/pricing',   to: 'static_pages#pricing'
   
   get  '/about',   to: 'static_pages#about'
-  
-  get  '/contact',   to: 'static_pages#contact'
 
   get  '/demo',   to: 'static_pages#demo'
   
@@ -30,6 +25,11 @@ Rails.application.routes.draw do
   get  '/agilecast',   to: 'static_pages#agilecast'
   
   get  '/privacy',   to: 'static_pages#privacy'
+  
+  get '/contact', to: 'contacts#new'
+  resources :contacts, only: [:new, :create]
+  
+  get '/contact/success', to: 'contacts#success'
   
   root 'static_pages#home'
 

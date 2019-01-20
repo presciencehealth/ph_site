@@ -10,7 +10,7 @@
       <div class="offset-md-3 col-md-6 col-12">
         <%= form_for @contact do |f| %>
           <% if flash[:error].present? %>
-              <p> flash[:error]</p>
+              <p class="error text-danger">Please make sure that you filled out all of the fields and submit again.</p>
           <% end %>
           <div class="form-group">
             <%= f.label :name %> <br>
@@ -24,8 +24,10 @@
             <%= f.label :message %> <br>
             <%= f.text_area :message, as: :text, class: 'form-control' %>
           </div>
-          <%= f.label :nickname %> <br>
-          <%= f.text_field :nickname, hint: 'leave this field blank' %>
+          <div class="form-group contact-hidden">
+            <%= f.label :nickname %>
+            <%= f.text_field :nickname, hint: 'leave this field blank' %>
+          </div>
           <%= f.submit 'Send Message', class: "btn btn-primary btn-ph-green" %>
         <% end %>
       </div>
