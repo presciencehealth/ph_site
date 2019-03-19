@@ -1,7 +1,7 @@
 class Demo < MailForm::Base
   attribute :name, :validate => true
   attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attribute :phone,   :validate => true
+  attribute :telephone,   :validate => true
   attribute :message,   :validate => true
   attribute :nickname,  :captcha  => true
 
