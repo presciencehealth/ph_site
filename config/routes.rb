@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'demo/new'
+
   scope :module => 'buttercms' do
     get '/categories/:slug' => 'categories#show', :as => :buttercms_category
     get '/author/:slug' => 'authors#show', :as => :buttercms_author
@@ -18,7 +20,7 @@ Rails.application.routes.draw do
   
   get  '/about',   to: 'static_pages#about'
 
-  get  '/demo',   to: 'static_pages#demo'
+  get  '/demo',   to: 'demo#new'
   
   get  '/staffright',   to: 'static_pages#staffright'
   
@@ -31,6 +33,10 @@ Rails.application.routes.draw do
   
   get '/contact/success', to: 'contacts#success'
   
+  resources :demo, only: [:new, :create]
+  
+  get '/demo/success', to: 'contacts#success'
+
   root 'static_pages#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
