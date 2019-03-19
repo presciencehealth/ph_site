@@ -31,6 +31,9 @@
         </div>
       </div>
     </div>
+    <% unless current_page?('/blog') %>
+      <%= render 'layouts/action' %>
+    <% end %>
     <%= render 'layouts/footer' %>
     <script>
       $(function(){
