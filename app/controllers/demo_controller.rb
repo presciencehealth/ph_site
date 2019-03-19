@@ -9,7 +9,7 @@ class DemoController < ApplicationController
     @contact.request = request
     if @contact.deliver
       flash.now[:error] = nil
-  render "contacts/success", notice: 'Message sent successfully'
+  render "demo/success", notice: 'Message sent successfully'
     else
       flash.now[:error] = 'Cannot send message'
       render :new
