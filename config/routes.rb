@@ -36,6 +36,8 @@ Rails.application.routes.draw do
   resources :demo, only: [:new, :create]
   
   get '/demo/success', to: 'demo#success'
+  
+  get  '/comingsoon',   to: 'static_pages#comingsoon'
 
   root 'static_pages#home'
 
