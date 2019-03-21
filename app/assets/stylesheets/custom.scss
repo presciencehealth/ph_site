@@ -81,6 +81,10 @@ form label {
 .btn {
     font-size: 1.0rem;
 }
+.btn:active, .btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
 .btn-lg {
     padding: 1.0rem 1.5rem;
 }
@@ -118,12 +122,11 @@ form label {
     border-radius: 4px;
     color: #3AAFA9;
 }
-.btn-outline-ph-green:hover, .btn-outline-ph-green:active {
-    border: 2px solid #3AAFA9;
+.btn-outline-ph-green:hover, .btn-outline-ph-green:active, .btn-outline-ph-green:focus {
+    border: 2px solid #3AAFA9 !important;
     border-radius: 4px;
     color: #FFFFFF;
-    background-color: #3AAFA9;
-    border: none;
+    background-color: #3AAFA9 !important;
 }
 
 /** Background **/
