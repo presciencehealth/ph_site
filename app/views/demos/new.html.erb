@@ -6,7 +6,7 @@
         <div class="col-12 col-md-4">
           <h3 class="page-title font-weight-bold pb-4">Schedule a Demo</h3>
           <p class="text-justify">Leverage advanced mathematical models to predict patient volumes in four hour increments by shift, day, week, or month. Overlay staff scheduling data and coverage rules from API Healthcare, Cerner, or Kronos to make accurate real-time decisions.</p>
-          <%= form_for @contact do |f| %>
+          <%= form_for @demo do |f| %>
           <% if flash[:error].present? %>
               <p class="error text-danger">Please make sure that you filled out all of the fields and submit again.</p>
           <% end %>
@@ -20,11 +20,11 @@
           </div>
           <div class="form-group">
             <%= f.label :telephone %> <br>
-            <%= f.text_field :telephone, required: true, class: 'form-control' %>
+            <%= f.text_field :telephone, class: 'form-control' %>
           </div>
           <div class="form-group">
             <%= f.label :institution %> <br>
-            <%= f.text_field :institution, required: true, class: 'form-control' %>
+            <%= f.text_field :institution, class: 'form-control' %>
           </div>
           <div class="form-group contact-hidden">
             <%= f.label :nickname %>

@@ -20,7 +20,8 @@ Rails.application.routes.draw do
   
   get  '/about',   to: 'static_pages#about'
 
-  get  '/demo',   to: 'demo#new'
+  get  '/demo',   to: 'demos#new'
+  resources :demos, only: [:new, :create]
   
   get  '/video',   to: 'static_pages#video'
   
@@ -35,9 +36,7 @@ Rails.application.routes.draw do
   
   get '/contact/success', to: 'contacts#success'
   
-  resources :demo, only: [:new, :create]
-  
-  get '/demo/success', to: 'demo#success'
+  get '/demo/success', to: 'demos#success'
   
   get  '/comingsoon',   to: 'static_pages#comingsoon'
 
