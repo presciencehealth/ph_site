@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   get  '/demo',   to: 'demo#new'
   
+  get  '/video',   to: 'static_pages#video'
+  
   get  '/staffright',   to: 'static_pages#staffright'
   
   get  '/agilecast',   to: 'static_pages#agilecast'
