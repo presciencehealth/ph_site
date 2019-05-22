@@ -35,17 +35,5 @@
       <%= render 'layouts/action' %>
     <% end %>
     <%= render 'layouts/footer' %>
-    <script>
-      $(function(){
-          var navbar = $('.navbar');
-          $(window).scroll(function(){
-              if($(window).scrollTop() <= 40){
-             		navbar.css('box-shadow', 'none');
-              } else {
-                navbar.css('box-shadow', '0 8px 24px rgba(0,0,0,.13)'); 
-              }
-          });  
-      })
-    </script>
   </body>
 </html>
